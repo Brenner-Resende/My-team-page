@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    margin: 4em auto;
+    max-width: 990px;
+}
+header .top-header,
+header .bottom-header {
+    flex: 1;
+}
+header .bottom-header {
+    max-width: 372px;
+}
+header .top-header h1 {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -0.045em;
+}
+header .bottom-header h2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+}
+header .bottom-header p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-inline: auto;
+}
+main figure {
+    position: relative;
+    width: 60%;
+}
+main figure:nth-child(3n+2) {
+    margin-top: 7em;
+}
+main figure .gallery-title {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+    position: absolute;
+    margin: 0;
+    right: -10%;
+}
+main figure img {
+    max-width: 100%;
+}
+main figure .gallery-name {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    cursor: pointer;
+}
+
+
+footer {
+    margin-top: 100px;
+}
+.footer-body p {
+    text-align: center;
+    color: #bdbdbd;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height: 17px;
+    padding-bottom: 20px;
+}
+  
+  .footer-body a {
+    color: #bdbdbd;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width:811px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    header .top-header {
+        margin-left: -108px;
+    }
+}
+
+@media screen and (max-width:621px) {
+    header .top-header,
+    header .bottom-header {
+        margin: auto 30px;
+    }
+    header .top-header h1 {
+        font-size: 36px;
+    }
+    header .bottom-header h2 {
+        font-size: 18px;
+    }
+    header .bottom-header p {
+        font-size: 14px;
+    }
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 12px;
+        margin: 10px;
+    }
+    main figure {
+        width: 139px;
+        margin: 0;
+    }
+    main figure .gallery-title {
+        font-size: 10px;
+        line-height: 13px;
+    }
+    main figure .gallery-name {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    main figure:nth-child(even) {
+        margin-top: 4em;
+}
+    main figure:nth-child(5) {
+        margin-top: unset;
+    }
+}
